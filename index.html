@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Luiza Pereira Uzszacki">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/styles-responsive.css">
+    <script src="assets/js/scripts.js" defer></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js" defer></script>
+    <title>To-do list</title>
+</head>
+<body>
+    <main>
+        <div class="flex-container">
+            <h1>To-do list</h1>
+            <div class="group">
+                <input type="text" maxlength="200" placeholder="Digite Aqui a sua Tarefa..." id="field-input-task" class="task" name="field-input-task" aria-label="Digite a tarefa que deseja adicionar a lista">
+                <button name="btn-task" id="btn-add-task" class="task" >Adicionar</button>
+            </div>
+            <ul class="group" id="ul-list-tasks">
+            </ul>
+        </div>
+    </main>
+</body>
+</html>
