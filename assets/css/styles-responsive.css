@@ -1,16 +1,38 @@
-@media screen and (max-width:800px) {
+@media (max-width:800px) {
     .flex-container {
-        max-width: 90%;
+        width: 80%;
     }
 }
 
 @media screen and (max-width:500px) {
     * {
-        font-family: 14px;
+        font-family: .8rem;
+    }
+
+    .flex-container {
+        width: 90%;
     }
 
     .flex-container h1 {
-        font-size: 45px;
+        font-size: 2.3rem;
+    }
+
+    .input-list-button {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width:400px) {
+    * {
+        font-family: .8rem;
+    }
+
+    .flex-container {
+        width: 90%;
+    }
+
+    .flex-container h1 {
+        font-size: 2.3rem;
     }
 
     div.group {
@@ -19,8 +41,14 @@
     .group #field-input-task {
         margin-right: 0;
     }
-
+    
     .group #btn-add-task {
         margin-top: 10px;
+    }
+}
+
+@media screen and (max-width:300px) {
+    .flex-container {
+        width: 95%;
     }
 }
