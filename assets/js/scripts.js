@@ -29,7 +29,6 @@ ulListTasks.addEventListener('click', element => {
     if (element.target.classList.contains('input-list-button')) {
         let parentTargetElement = element.target.parentElement
         deleteTask(parentTargetElement)
-        // deleteLocalStorage(parentTargetElement)
     }
 })
 
@@ -55,36 +54,28 @@ function addTask() {
 }
 
 function deleteTask(element) {
+    let targetRemove = tasks.filter(el => {
+        if (el.classList.contains(element.className)) {
+            return el
+        }
+    })
+    tasks = tasks.filter(task => task != targetRemove[0])
     ulListTasks.removeChild(element)
 }
 
 function createNewElement(text, ulListTasks) {
     let li = document.createElement('li')
+    li.classList.add(`li-list-${taskUniqueNumber}`)
     li.classList.add()
-    li.classList.add(`elem-${taskUniqueNumber}`)
         li.innerHTML = `
-        <input type="checkbox" class="input-list elem-${taskUniqueNumber}" id="input-id-${taskUniqueNumber}">
-        <label class="input-list elem-${taskUniqueNumber}" for="input-id-${taskUniqueNumber}">
+        <input type="checkbox" class="input-list" id="input-id-${taskUniqueNumber}">
+        <label class="input-list" for="input-id-${taskUniqueNumber}">
         ${text}
         </label>
-        <button class="input-list-button elem-${taskUniqueNumber}" id="input-list-button-${taskUniqueNumber}">
+        <button class="input-list-button">
         X
         </button>`
     ulListTasks.appendChild(li)
     tasks.push(li)
-    // saveLocalStorage(text)
     taskUniqueNumber++
 }
-
-// function saveLocalStorage(text) {
-//     localStorage.setItem(`Task-${taskUniqueNumber}`, text)
-//     console.log(localStorage.getItem(`Task-${taskUniqueNumber}`))
-// }
-
-// function deleteLocalStorage(obj) {
-    
-// }
-
-// function getLocalStorage() {
-
-// }
